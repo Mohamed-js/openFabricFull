@@ -1,0 +1,19 @@
+<div *ngIf="product.title" class="row my-5">
+  <div class="col-12 col-sm-6">
+    <img
+      class="card-img-top pe-0 pe-sm-3 rounded"
+      src="{{ product.image }}"
+      alt="{{ product.title }}"
+    />
+  </div>
+  <div class="col-12 col-sm-6">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="text-uppercase mt-3 mt-sm-0">{{ product.title }}</h1>
+      <a routerLink="/products/edit/{{ product._id }}" class="nav-link"
+        ><button class="btn btn-warning text-white">Edit</button></a
+      >
+    </div>
+    <h2 class="text-warning">${{ product.price }}</h2>
+    <p class="mt-5">{{ product.description }}</p>
+  </div>
+</div>

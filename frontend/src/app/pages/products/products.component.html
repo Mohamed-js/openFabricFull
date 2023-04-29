@@ -1,0 +1,27 @@
+<h1 class="mt-5">All Products</h1>
+
+<div class="row gap-2 justify-content-center my-5" *ngIf="products.length > 0">
+  <a
+    class="card overflow-hidden col-6 col-md-4 col-lg-3 p-0 nav-link"
+    style="width: 18rem"
+    *ngFor="let product of products"
+    routerLink="/products/{{ product._id }}"
+  >
+    <img
+      src="{{ product.image }}"
+      class="card-img-top"
+      alt="{{ product.title }}"
+    />
+    <div class="card-body">
+      <h5 class="card-title text-capitalize">{{ product.title }}</h5>
+      <p class="card-text">
+        {{ product.description }}
+      </p>
+      <h6
+        class="position-absolute top-0 start-0 bg-warning p-2 px-3 text-white border-warning border rounded ms-2 mt-2"
+      >
+        {{ product.price }}$
+      </h6>
+    </div>
+  </a>
+</div>

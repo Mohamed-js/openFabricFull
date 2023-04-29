@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.card-img-top {
+  aspect-ratio: 3/3;
+  object-fit: cover;
+}
